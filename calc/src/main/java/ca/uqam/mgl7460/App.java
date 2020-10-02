@@ -8,6 +8,6 @@ import ca.uqam.mgl7460.interfaces.ArgsListener;
 public class App {
     public static void main(String[] args) {
         ArgsListener argsListener = new ArgsListener(args);
-        System.out.println(argsListener.start());
+        argsListener.start();
     }
 }

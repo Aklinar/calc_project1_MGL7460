@@ -4,43 +4,37 @@ import ca.uqam.mgl7460.operators.Operator;
 
 public class ArgsListener {
 
-    private String[] params;
+    private final String[] params;
 
     public ArgsListener(String[] args) {
-        setParams(args);
+        this.params = args;
     }
 
-    public String start() {
-        Operator op = OperatorFactory.getOperator(getParams()[0]);
-        if (op == null) {
-            checkParams();
-            return null;
-        }
-        return op.result(getParams()[1], getParams()[2]);
-    }
-
-    public void checkParams() {
-        if (getParams()[0] == "-h") {
+    public void start() {
+        if (this.params.length == 0) {
             help();
-        } else {
-            error();
+            return;
         }
+        Operator op = OperatorFactory.getOperator(this.params[0]);
+        if (op == null) {
+            error();
+            help();
+            return;
+        }
+        System.out.println(op.result(this.params[1], this.params[2]));
     }
 
     public void help() {
-        System.out.println("Aide");
+        System.out.println("Usage: java -jar calc.jar OPTION value1 value2\n\n" +
+                "Options:\n" +
+                "\t-a\tAdditionner value1 et value2\n" +
+                "\t-s\tSoustraire value1 et value2\n" +
+                "\t-d\tDiviser value1 et value2\n" +
+                "\t-m\tMultiplier value1 et value2\n");
     }
 
     public void error() {
-        System.out.println("Erreur");
-    }
-
-    public String[] getParams() {
-        return params;
-    }
-
-    public void setParams(String[] params) {
-        this.params = params;
+        System.out.println("Option \"" + this.params[0] + "\" inconnue\nVoir l'aide :\n");
     }
 
 }
