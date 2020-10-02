@@ -1,4 +1,4 @@
-package operators;
+package ca.uqam.mgl7460.operators;
 
 public class Divide extends Operator {
 
@@ -11,4 +11,4 @@ public class Divide extends Operator {
         }
     }
 }
- //test test2
+//test test2

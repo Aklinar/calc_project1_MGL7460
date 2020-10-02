@@ -1,6 +1,6 @@
-package interfaces;
+package ca.uqam.mgl7460.interfaces;
 
-import operators.*;
+import ca.uqam.mgl7460.operators.*;
 
 public class OperatorFactory {
 

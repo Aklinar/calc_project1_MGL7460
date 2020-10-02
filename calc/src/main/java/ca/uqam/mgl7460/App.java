@@ -1,4 +1,6 @@
-import interfaces.ArgsListener;
+package ca.uqam.mgl7460;
+
+import ca.uqam.mgl7460.interfaces.ArgsListener;
 
 /**
  * Hello world!

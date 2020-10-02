@@ -59,7 +59,7 @@
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>App</mainClass>
+                <mainClass>ca.uqam.mgl7460.App</mainClass>
               </manifest>
             </archive>
           </configuration>

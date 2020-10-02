@@ -1,8 +1,6 @@
-package interfaces;
+package ca.uqam.mgl7460.interfaces;
 
-import operators.Operator;
-
-import java.util.Arrays;
+import ca.uqam.mgl7460.operators.Operator;
 
 public class ArgsListener {
 
